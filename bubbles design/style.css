@@ -1,0 +1,162 @@
+*
+{
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+}
+.hero
+{
+	width:100%;
+	height:100vh;
+	background-image:url(images/background.png);
+	background-size:cover;
+	background-position:center;
+	position:relative;
+	overflow:hidden; /*why overflow:hidden here */
+}
+.logo
+{
+	width:100px;
+	cursor:pointer;
+}
+.navbar
+{
+	width:85%;
+	height:15%;
+	margin:auto;
+	display:flex;
+	align-items:center; /* becuse it was streched we set it center */
+	justify-content:space-between; /* one first one in the center and one the last */
+}
+button
+{
+	color:#fbfcfd;
+	padding:10px 25px; /* to make it bigger and nicer */
+	background-color:transparent;
+	border:1px solid #fff;
+	border-radius:20px;
+	outline:none;
+	cursor:pointer;
+}
+.content
+{
+	color:#fbfcfd;
+	position:absolute;
+	top:50%;
+	left:8%;
+	transform:translateY(-50%);
+	z-index:2; /* I dont know why */ /*it is for the bubbles that be behind the text and the content */
+}
+h1
+{
+	font-size:80px;
+	margin:10px 0px 30px; /* a space between h1 and take a tour button and a little space from up small tag */
+	line-height:80px;
+}
+/* why sidebar place inside of content in the left of content instead of under content .its a block element */ /* because content position got absolout 
+and lost his position in the flow */
+/* this sidebar has a relation with overflow:hidden of hero tag */
+.sidebar
+{
+	width:50px;
+	height:100vh;
+	background-image:linear-gradient(#00545d,#000729);
+	position:absolute;
+	right:0; /* we wanted it be right of the page */
+	top:0; /* we set it to zero because it bechasbe daghigan be balaye safhe ye navbar bala ta payeen beshe */
+}
+img.menu
+{
+	display:block; /*why*/
+	width:25px;
+	margin:40px auto 0;
+	cursor:pointer;
+}
+.social-links img,.useful-links img
+{
+	width:25px;
+	margin:5px auto; /* why when we set margin auto here images dont go into the center of navbar */
+	cursor:pointer;
+}
+.social-links
+{
+	width:50px;
+	text-align:center; /* for centering logo images */
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+}
+.useful-links
+{
+	width:50px;
+	text-align:center; /* for centering logo images */
+	position:absolute;
+	bottom:30px;
+}
+.bubbles img
+{
+	width:50px;
+	animation:bubble 7s linear infinite;
+}
+.bubbles
+{
+	width:100%;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	position:absolute;
+	bottom:-70px;
+}
+@keyframes bubble
+{
+	0%
+	{
+		transform:translateY(0%);
+		opacity:0; /*why */ /* becuse aval ke shoro mishe mahv bashe oon vasta ke dare mire bala maolom bashe baz bala mahv beshe*/
+	}
+	50%
+	{
+		opacity:1;
+	}
+	70%
+	{
+		opacity:1;
+	}
+	100%
+	{
+		transform:translateY(-80vh);
+		opacity:0;
+	}
+}
+.bubbles img:nth-child(1)
+{
+	animation-delay:2s;
+	width:25px;
+}
+.bubbles img:nth-child(2)
+{
+	animation-delay:1s;
+}
+.bubbles img:nth-child(3)
+{
+	animation-delay:3s;
+	width:25px;
+}
+.bubbles img:nth-child(4)
+{
+	animation-delay:4.5s;
+}
+.bubbles img:nth-child(5)
+{
+	animation-delay:3s;
+}
+.bubbles img:nth-child(6)
+{
+	animation-delay:6s;
+	width:20px;
+}
+.bubbles img:nth-child(7)
+{
+	animation-delay:7s;
+	width:35px;
+}
